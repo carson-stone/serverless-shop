@@ -11,7 +11,7 @@ Serverless Shop is a small, dummy ecommerce shop developed using a serverless ar
 <img src="https://raw.githubusercontent.com/carson-stone/serverless-shop/master/screenshots/desktop3.png" alt="cart page" width="500" />
 
 ### Mobile versions
-<img src="https://raw.githubusercontent.com/carson-stone/serverless-shop/master/screenshots/mobile1.png" alt="mobile shopping page" width="500" />
+<img src="https://raw.githubusercontent.com/carson-stone/serverless-shop/master/screenshots/mobile1.png" alt="mobile shopping page" width="200" />
 
-<img src="https://raw.githubusercontent.com/carson-stone/serverless-shop/master/screenshots/mobile2.png" alt="mobile item detail" width="500" />
+<img src="https://raw.githubusercontent.com/carson-stone/serverless-shop/master/screenshots/mobile2.png" alt="mobile item detail" width="200" />
 
