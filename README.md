@@ -1,5 +1,5 @@
 # serverless-shop
-Serverless Shop is a small ecommerce shop developed using a serverless architecture. 
+Serverless Shop is a small, dummy ecommerce shop developed using a serverless architecture. I created this to learn the AWS ecosystem, understand serverless, and practice using React. 
 
 ## Figma designs (implementation still ongoing)
 <img src="https://raw.githubusercontent.com/carson-stone/serverless-shop/master/screenshots/desktop1.png" alt="shopping page" width="500" />
