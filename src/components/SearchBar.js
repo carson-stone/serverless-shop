@@ -1,8 +1,10 @@
 import React from 'react';
-import searchIcon from '../assets/search-icon.png';
+import './SearchBar.css';
+import searchIconBrand from '../assets/search-icon-brand.png';
+import searchIconSearchbarExpanded from '../assets/search-icon-searchbar-expanded.png';
 
 export default function SearchBar({ expanded, expand }) {
-  return (
+  return expanded ? (
     <div className='search-bar'>
       <input
         type='text'
@@ -11,10 +13,19 @@ export default function SearchBar({ expanded, expand }) {
         placeholder='"apple," "watch," ...'
       />
       <img
-        src={searchIcon}
+        src={searchIconSearchbarExpanded}
         alt='search-icon'
         height={25}
-        onClick={(e) => expand(e)}
+        onClick={() => expand(false)}
+      />
+    </div>
+  ) : (
+    <div id='search-icon-container'>
+      <img
+        src={searchIconBrand}
+        alt='search-icon'
+        height={25}
+        onClick={() => expand(true)}
       />
     </div>
   );
