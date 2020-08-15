@@ -6,12 +6,18 @@ import menuIcon from '../assets/menu-icon.png';
 import cartIcon from '../assets/cart-icon.png';
 import userIcon from '../assets/user-icon.png';
 
-export default function Nav() {
+export default function Nav({ openSidebar }) {
   const [searchBarExpanded, expandSearchBar] = useState(false);
 
   return (
     <nav className='Nav'>
-      <img src={menuIcon} alt='menu-icon' height={9} width={35.5} />
+      <img
+        src={menuIcon}
+        alt='menu-icon'
+        height={9}
+        width={35.5}
+        onClick={openSidebar}
+      />
       <div className='nav-icons'>
         <form>
           <SearchBar expanded={searchBarExpanded} expand={expandSearchBar} />

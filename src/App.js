@@ -7,11 +7,15 @@ import Routes from './Routes';
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
+  const [sidebarOpen, setSidebar] = useState(false);
+  const openSidebar = () => setSidebar(true);
+  const closeSidebar = () => setSidebar(false);
 
   return (
     <div className='App'>
-      <Nav />
+      <Nav openSidebar={openSidebar} />
       <AppContext.Provider value={{ isAuthenticated, setAuthenticated }}>
+        <Sidebar open={sidebarOpen} closeSidebar={closeSidebar} />
         <Routes />
       </AppContext.Provider>
     </div>

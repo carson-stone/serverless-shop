@@ -1,3 +1,7 @@
+h1 {
+  align-self: center;
+}
+
 .Login form {
   display: flex;
   flex-direction: column;
