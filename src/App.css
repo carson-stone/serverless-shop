@@ -10,9 +10,45 @@
 .container {
   margin-top: 50px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
   font-size: 36px;
   margin-bottom: 50px;
+}
+
+form {
+  flex: 1;
+}
+
+input {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  margin-bottom: 2.5rem;
+  font-size: 18px;
+}
+
+.primary-btn {
+  background-color: #e9fae3;
+  color: #231f20;
+  padding: 0.5rem 4rem;
+  border-radius: 30px;
+  border: none;
+  margin-top: 1rem;
+  font-size: 24px;
+}
+
+.primary-btn:disabled {
+  background-color: #a5a5a5;
+  color: #464141;
+}
+
+label {
+  color: #e9fae3;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }

@@ -11,6 +11,8 @@
 #search {
   border: none;
   background: none;
+  margin: 0;
+  padding: 0;
 }
 
 #search:focus {
@@ -18,7 +20,7 @@
 }
 
 #search-icon-container {
-  padding: 6px;
   display: flex;
   align-items: center;
+  padding: 6px 0;
 }
