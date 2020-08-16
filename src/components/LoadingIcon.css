@@ -1,0 +1,44 @@
+.loading-icon {
+  transition: all ease;
+}
+
+.rs1 {
+  transform: rotate(45deg);
+}
+
+.rs2 {
+  transform: rotate(90deg);
+}
+
+.rs3 {
+  transform: rotate(135deg);
+}
+
+.rs4 {
+  transform: rotate(180deg);
+}
+
+.rs5 {
+  transform: rotate(225deg);
+}
+
+.rs6 {
+  transform: rotate(270deg);
+}
+
+.rs7 {
+  transform: rotate(315deg);
+}
+
+.dimmer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: hsla(0, 100%, 0%, 80%);
+}

@@ -3,10 +3,12 @@ import { useHistory } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import './Login.css';
 import { useAppContext } from '../libs/contextLib';
+import LoadingIcon from '../components/LoadingIcon';
 
 export default function Login() {
   const history = useHistory();
   const { setAuthenticated } = useAppContext();
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -16,21 +18,25 @@ export default function Login() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    setLoading(true);
 
     try {
       await Auth.signIn(email, password);
       setAuthenticated(true);
       history.push('/');
-    } catch (e) {
-      alert(e.message);
+    } catch (error) {
+      alert(error.message);
+    } finally {
+      setLoading(false);
     }
   }
 
   return (
     <div className='Login container'>
+      {loading && <LoadingIcon />}
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <label for='email'>email address</label>
+        <label htmlFor='email'>email address</label>
         <input
           type='email'
           id='email'
@@ -39,14 +45,14 @@ export default function Login() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label for='password'>password</label>
+        <label htmlFor='password'>password</label>
         <input
           type='password'
           id='password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className='primary-btn' disabled={!validate()}>
+        <button className='primary-btn' disabled={!validate() || loading}>
           log in
         </button>
       </form>
