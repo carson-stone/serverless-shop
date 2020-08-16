@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import './Login.css';
 import { useAppContext } from '../libs/contextLib';
 
 export default function Login() {
+  const history = useHistory();
   const { setAuthenticated } = useAppContext();
-  const [redirect, setRedirect] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -20,15 +20,13 @@ export default function Login() {
     try {
       await Auth.signIn(email, password);
       setAuthenticated(true);
-      setRedirect(true);
+      history.push('/');
     } catch (e) {
       alert(e.message);
     }
   }
 
-  return redirect ? (
-    <Redirect to='/' />
-  ) : (
+  return (
     <div className='Login container'>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
