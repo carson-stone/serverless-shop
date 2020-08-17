@@ -51,7 +51,7 @@ export default function Sidebar({ open, closeSidebar }) {
           <h1>Serverless Shop</h1>
         </div>
       </div>
-      <div className='dimmer' onClick={closeSidebar}></div>
+      <div className='sidebar-dimmer' onClick={closeSidebar}></div>
     </div>
   );
 }

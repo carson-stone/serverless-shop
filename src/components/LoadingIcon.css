@@ -30,7 +30,7 @@
   transform: rotate(315deg);
 }
 
-.Login .dimmer {
+.dimmer {
   position: fixed;
   top: 0;
   left: 0;

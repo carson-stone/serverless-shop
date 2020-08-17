@@ -21,7 +21,7 @@
   margin: 0;
 }
 
-.dimmer {
+.sidebar-dimmer {
   flex: 1;
   background-color: hsla(0, 100%, 0%, 50%);
 }
