@@ -47,7 +47,7 @@ input {
   color: #464141;
 }
 
-.secondary-btn:disabled {
+.secondary-btn {
   background-color: transparent;
   color: #e9fae3;
   padding: 0.5rem 4rem;

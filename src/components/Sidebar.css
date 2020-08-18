@@ -7,7 +7,7 @@
   display: flex;
 }
 
-.sidebar {
+.Sidebar {
   color: #fff;
   background-color: #384d48;
   width: 300px;
@@ -17,7 +17,7 @@
   justify-content: space-between;
 }
 
-.sidebar h1 {
+.Sidebar h1 {
   margin: 0;
 }
 
@@ -26,7 +26,7 @@
   background-color: hsla(0, 100%, 0%, 50%);
 }
 
-img {
+.Sidebar img {
   margin-bottom: 25px;
 }
 

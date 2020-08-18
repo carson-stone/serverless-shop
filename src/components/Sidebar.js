@@ -10,7 +10,7 @@ export default function Sidebar({ open, closeSidebar }) {
 
   return !open ? null : (
     <div className='sidebar-overlay'>
-      <div className='sidebar'>
+      <div className='Sidebar'>
         <div>
           <div>
             <img
