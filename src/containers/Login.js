@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import './Login.css';
 import { useAppContext } from '../libs/contextLib';
+import { useFormFields } from '../libs/hooksLib';
 import { onError } from '../libs/errorLib';
 import LoadingIcon from '../components/LoadingIcon';
 
@@ -10,11 +11,13 @@ export default function Login() {
   const history = useHistory();
   const { setAuthenticated } = useAppContext();
   const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [fields, handleFieldChange] = useFormFields({
+    email: '',
+    password: '',
+  });
 
   function validate() {
-    return email.length && password.length;
+    return fields.email.length && fields.password.length;
   }
 
   async function handleSubmit(event) {
@@ -22,7 +25,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      await Auth.signIn(email, password);
+      await Auth.signIn(fields.email, fields.password);
       setAuthenticated(true);
       history.push('/');
     } catch (error) {
@@ -43,15 +46,15 @@ export default function Login() {
           id='email'
           placeholder='name@example.com'
           autoFocus
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={fields.email}
+          onChange={handleFieldChange}
         />
         <label htmlFor='password'>password</label>
         <input
           type='password'
           id='password'
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={fields.password}
+          onChange={handleFieldChange}
         />
         <button className='primary-btn' disabled={!validate() || loading}>
           log in

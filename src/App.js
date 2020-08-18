@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Auth } from 'aws-amplify';
 import './App.css';
 import { AppContext } from './libs/contextLib';
-import { onError } from '../libs/errorLib';
+import { onError } from './libs/errorLib';
 import Nav from './components/Nav';
 import Sidebar from './components/Sidebar';
 import Routes from './Routes';
