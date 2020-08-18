@@ -7,7 +7,7 @@ export default function LoadingIcon() {
   const [rotationStep, setRotationStep] = useState(1);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       if (classes.length < 9) {
         setClasses([...classes, `rs${rotationStep}`]);
         setRotationStep(rotationStep + 1);
@@ -16,6 +16,8 @@ export default function LoadingIcon() {
         setRotationStep(1);
       }
     }, 200);
+
+    return clearTimeout(timeout);
   }, [rotationStep]);
 
   return (

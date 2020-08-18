@@ -4,6 +4,7 @@ import Home from './containers/Home';
 import Cart from './containers/Cart';
 import Profile from './containers/Profile';
 import Login from './containers/Login';
+import Signup from './containers/Signup';
 import NotFound from './containers/NotFound';
 
 export default function Routes() {
@@ -20,6 +21,9 @@ export default function Routes() {
       </Route>
       <Route exact path='/login'>
         <Login />
+      </Route>
+      <Route exact path='/signup'>
+        <Signup />
       </Route>
       <Route>
         <NotFound />

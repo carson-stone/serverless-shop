@@ -6,6 +6,7 @@ import { onError } from './libs/errorLib';
 import Nav from './components/Nav';
 import Sidebar from './components/Sidebar';
 import Routes from './Routes';
+import LoadingIcon from './components/LoadingIcon';
 
 function App() {
   const [isAuthenticating, setAuthenticating] = useState(true);
@@ -32,15 +33,14 @@ function App() {
   }, []);
 
   return (
-    !isAuthenticating && (
-      <div className='App'>
-        <Nav openSidebar={openSidebar} />
-        <AppContext.Provider value={{ isAuthenticated, setAuthenticated }}>
-          <Sidebar open={sidebarOpen} closeSidebar={closeSidebar} />
-          <Routes />
-        </AppContext.Provider>
-      </div>
-    )
+    <div className='App'>
+      {isAuthenticating && <LoadingIcon />}
+      <Nav openSidebar={openSidebar} />
+      <AppContext.Provider value={{ isAuthenticated, setAuthenticated }}>
+        <Sidebar open={sidebarOpen} closeSidebar={closeSidebar} />
+        <Routes />
+      </AppContext.Provider>
+    </div>
   );
 }
 
