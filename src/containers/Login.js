@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import './Login.css';
 import { useAppContext } from '../libs/contextLib';
@@ -59,6 +59,7 @@ export default function Login() {
         <button className='primary-btn' disabled={!validate() || loading}>
           log in
         </button>
+        <Link to='/signup'>sign up</Link>
       </form>
     </div>
   );

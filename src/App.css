@@ -47,6 +47,16 @@ input {
   color: #464141;
 }
 
+.secondary-btn:disabled {
+  background-color: transparent;
+  color: #e9fae3;
+  padding: 0.5rem 4rem;
+  border-radius: 30px;
+  border: solid #e9fae3 2px;
+  margin-top: 1rem;
+  font-size: 24px;
+}
+
 label {
   color: #e9fae3;
   font-weight: bold;
