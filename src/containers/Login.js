@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import './Login.css';
 import { useAppContext } from '../libs/contextLib';
+import { onError } from '../libs/errorLib';
 import LoadingIcon from '../components/LoadingIcon';
 
 export default function Login() {
@@ -25,7 +26,7 @@ export default function Login() {
       setAuthenticated(true);
       history.push('/');
     } catch (error) {
-      alert(error.message);
+      onError(error);
     } finally {
       setLoading(false);
     }
