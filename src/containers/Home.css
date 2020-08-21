@@ -1,1 +1,7 @@
-
+.Home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: space-evenly;
+  column-gap: 50px;
+  row-gap: 50px;
+}
