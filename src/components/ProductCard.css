@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.ProductCard img {
+  cursor: pointer;
+}
+
 .product-info {
   background-color: #e9fae3;
   color: #231f20;
@@ -12,6 +16,7 @@
   box-sizing: border-box;
   padding: 20px 10px;
   margin-top: 4px;
+  cursor: pointer;
 }
 
 .product-info div {
