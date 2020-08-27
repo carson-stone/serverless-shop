@@ -41,10 +41,18 @@ export default function Sidebar({ open, closeSidebar }) {
         </div>
         <div>
           <ul>
-            <li>all</li>
-            <li>watches</li>
-            <li>shoes</li>
-            <li>jackets</li>
+            <li>
+              <a href='/'>all</a>
+            </li>
+            <li>
+              <a href='/'>watches</a>
+            </li>
+            <li>
+              <a href='/'>shoes</a>
+            </li>
+            <li>
+              <a href='/'>jackets</a>
+            </li>
           </ul>
         </div>
         <div>
