@@ -42,16 +42,24 @@ export default function Sidebar({ open, closeSidebar }) {
         <div>
           <ul>
             <li>
-              <a href='/'>all</a>
+              <Link to='/' onClick={closeSidebar}>
+                all
+              </Link>
             </li>
             <li>
-              <a href='/'>watches</a>
+              <Link to='/' onClick={closeSidebar}>
+                watches
+              </Link>
             </li>
             <li>
-              <a href='/'>shoes</a>
+              <Link to='/' onClick={closeSidebar}>
+                shoes
+              </Link>
             </li>
             <li>
-              <a href='/'>jackets</a>
+              <Link to='/' onClick={closeSidebar}>
+                jackets
+              </Link>
             </li>
           </ul>
         </div>

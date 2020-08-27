@@ -36,6 +36,7 @@ export default function ProductPage() {
       <span>
         <img
           src={`data:image/png;base64, ${product.image}`}
+          width={650}
           alt={product.name}
         />
       </span>
