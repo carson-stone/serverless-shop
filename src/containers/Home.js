@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Home.css';
 import { useAppContext } from '../libs/contextLib';
 import ProductCard from '../components/ProductCard';
+import Chip from '../components/Chip';
 
 export default function Home() {
   const [selectedButton, setSelectedButton] = useState('all types');
@@ -25,15 +26,13 @@ export default function Home() {
       <div className='header-row'>
         <h1>Watches</h1>
         <div className='chips'>
-          <button className='chip selected'>{selectedButton}</button>
-          {unselectedButtons.map((button) => (
-            <button
-              className='chip'
+          <Chip primary text={selectedButton} key={selectedButton} />
+          {unselectedButtons.map((buttonText) => (
+            <Chip
+              text={buttonText}
               onClick={(e) => makeSelected(e)}
-              key={button}
-            >
-              {button}
-            </button>
+              key={buttonText}
+            />
           ))}
         </div>
       </div>

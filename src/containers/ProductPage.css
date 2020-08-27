@@ -1,6 +1,7 @@
 .ProductPage span {
   display: flex;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .ProductPage span img {
