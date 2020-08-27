@@ -5,3 +5,29 @@
   column-gap: 50px;
   row-gap: 50px;
 }
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.chips {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chip {
+  border: solid #e9fae3 2px;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 40px;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0 25px;
+}
+
+.chip.selected {
+  background-color: #e9fae3;
+  color: #231f20;
+}
