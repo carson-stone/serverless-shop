@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './Home.css';
 import { useAppContext } from '../libs/contextLib';
 import ProductCard from '../components/ProductCard';
 
 export default function Home() {
+  const history = useHistory();
   const [selectedButton, setSelectedButton] = useState('all types');
   const [unselectedButtons, setUnselectedButtons] = useState([
     'Apple',
