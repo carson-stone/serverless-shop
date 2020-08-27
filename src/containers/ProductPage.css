@@ -1,0 +1,12 @@
+.ProductPage span {
+  display: flex;
+  align-items: center;
+}
+
+.ProductPage span img {
+  margin-right: 25px;
+}
+
+.ProductPage h1 {
+  margin-bottom: 0px;
+}
