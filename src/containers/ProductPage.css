@@ -11,3 +11,33 @@
 .ProductPage h1 {
   margin-bottom: 0px;
 }
+
+.ProductPage .image-and-reviews {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.reviews {
+  min-width: 400px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.reviews span {
+  width: 100%;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.reviews h3 {
+  text-align: center;
+}
+
+.reviews img {
+  margin-bottom: 25px;
+}
+
+hr {
+  margin: 0;
+  width: 100%;
+}

@@ -33,12 +33,70 @@ export default function ProductPage() {
         <Chip text='add to cart' primary />
         <Chip text='leave review' />
       </span>
-      <span>
+      <span className='image-and-reviews'>
         <img
           src={`data:image/png;base64, ${product.image}`}
           width={650}
           alt={product.name}
         />
+        <div className='reviews'>
+          <h3>Reviews</h3>
+          <span>
+            <p>john</p>
+            <p>*****</p>
+          </span>
+          <img
+            src={`data:image/png;base64, ${product.image}`}
+            width={400}
+            alt={product.name}
+          />
+          <hr />
+          <span>
+            <p>john</p>
+            <p>*****</p>
+          </span>
+          <img
+            src={`data:image/png;base64, ${product.image}`}
+            width={400}
+            alt={product.name}
+          />
+          <hr />
+          <span>
+            <p>john</p>
+            <p>*****</p>
+          </span>
+          <hr />
+          <span>
+            <p>john</p>
+            <p>*****</p>
+          </span>
+          <hr />
+          <span>
+            <p>john</p>
+            <p>*****</p>
+          </span>
+          <img
+            src={`data:image/png;base64, ${product.image}`}
+            width={400}
+            alt={product.name}
+          />
+          <hr />
+          <span>
+            <p>john</p>
+            <p>*****</p>
+          </span>
+          <hr />
+          <span>
+            <p>john</p>
+            <p>*****</p>
+          </span>
+          <hr />
+          <span>
+            <p>john</p>
+            <p>*****</p>
+          </span>
+          <hr />
+        </div>
       </span>
     </div>
   );
