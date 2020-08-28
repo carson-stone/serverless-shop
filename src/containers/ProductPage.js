@@ -27,7 +27,7 @@ export default function ProductPage() {
       </span>
       <span>
         <div className='price-and-rating'>
-          <p>{product.price}</p>
+          <p>${product.price}</p>
           <p>*****</p>
         </div>
         <Chip text='add to cart' primary />
