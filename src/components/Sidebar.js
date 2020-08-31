@@ -19,6 +19,7 @@ export default function Sidebar({ open, closeSidebar }) {
               height={18}
               width={18}
               onClick={closeSidebar}
+              className='x-icon'
             />
           </div>
           {isAuthenticated ? (

@@ -20,3 +20,7 @@
 .nav-link:nth-child(2) {
   margin: 0 2rem;
 }
+
+.menu-icon {
+  cursor: pointer;
+}

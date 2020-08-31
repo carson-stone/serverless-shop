@@ -17,6 +17,7 @@ export default function Nav({ openSidebar }) {
         height={9}
         width={35.5}
         onClick={openSidebar}
+        className='menu-icon'
       />
       <div className='nav-icons'>
         <form>
