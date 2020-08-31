@@ -44,6 +44,7 @@ export default function Home() {
               name={product.name}
               price={product.price}
               key={product.name}
+              rating={product.rating}
             />
           ) : (
             product.name.includes(selectedButton) && (
@@ -52,6 +53,7 @@ export default function Home() {
                 name={product.name}
                 price={product.price}
                 key={product.name}
+                rating={product.rating}
               />
             )
           )

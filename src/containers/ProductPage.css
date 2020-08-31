@@ -6,6 +6,19 @@
 
 .price-and-rating {
   margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProductPage .price-and-rating span {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.ProductPage .price-and-rating img {
+  margin: 0;
 }
 
 .ProductPage span img {
@@ -41,7 +54,16 @@
   margin: 0 auto 25px 0;
 }
 
+.reviews .review-stars {
+  display: inline;
+  text-align: end;
+}
+
 hr {
   margin: 0;
   width: 100%;
+}
+
+.ProductPage .reviews .star {
+  margin: 0;
 }

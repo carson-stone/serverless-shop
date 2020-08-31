@@ -4,16 +4,29 @@ import { API } from 'aws-amplify';
 import './ProductPage.css';
 import { useAppContext } from '../libs/contextLib';
 import backIcon from '../assets/back-icon.png';
+import starIcon from '../assets/star-icon-light.png';
 import Chip from '../components/Chip';
 
 export default function ProductPage() {
   const { name } = useParams();
   const { products } = useAppContext();
   const [product, setProduct] = useState(null);
+  const [stars, setStars] = useState([]);
   const [reviews, setReviews] = useState([]);
 
   async function getReviews(product) {
     const data = await API.get('reviews', `/products/${product}/reviews`);
+
+    data.forEach((review) => {
+      let newStars = [];
+
+      for (let i = 1; i <= review.rating; ++i) {
+        newStars.push('star');
+      }
+
+      review.stars = newStars;
+    });
+
     setReviews([...data]);
   }
 
@@ -22,6 +35,12 @@ export default function ProductPage() {
     setProduct(data);
 
     if (data) {
+      const newStars = [];
+      for (let i = 1; i <= data.rating; ++i) {
+        newStars.push('star');
+      }
+      setStars(newStars);
+
       getReviews(data.name);
     }
   }, [products]);
@@ -39,7 +58,13 @@ export default function ProductPage() {
       <span>
         <div className='price-and-rating'>
           <p>${product.price}</p>
-          <p>*****</p>
+          <span>
+            {product.rating === undefined ? (
+              <p>no rating</p>
+            ) : (
+              stars.map(() => <img src={starIcon} alt='star' />)
+            )}
+          </span>
         </div>
         <Chip text='add to cart' primary />
         <Chip text='leave review' />
@@ -61,7 +86,11 @@ export default function ProductPage() {
                   <div key={review.userId}>
                     <span>
                       <p>{review.userId}</p>
-                      <p>*****</p>
+                      <span className='review-stars'>
+                        {review.stars.map(() => (
+                          <img src={starIcon} className='star' alt='star' />
+                        ))}
+                      </span>
                     </span>
                     <img
                       src={`data:image/png;base64, ${review.image}`}
