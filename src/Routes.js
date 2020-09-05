@@ -6,6 +6,7 @@ import Profile from './containers/Profile';
 import Login from './containers/Login';
 import Signup from './containers/Signup';
 import ProductPage from './containers/ProductPage';
+import AddReviewPage from './containers/AddReviewPage';
 import NotFound from './containers/NotFound';
 
 export default function Routes() {
@@ -28,6 +29,9 @@ export default function Routes() {
       </Route>
       <Route exact path='/products/:name'>
         <ProductPage />
+      </Route>
+      <Route exact path='/products/:name/review'>
+        <AddReviewPage />
       </Route>
       <Route>
         <NotFound />

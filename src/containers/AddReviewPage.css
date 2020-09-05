@@ -1,0 +1,15 @@
+.AddReviewPage span {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.AddReviewPage a {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.AddReviewPage h1 {
+  margin-bottom: 0px;
+}

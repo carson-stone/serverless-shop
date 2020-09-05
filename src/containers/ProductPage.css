@@ -21,7 +21,9 @@
   margin: 0;
 }
 
-.ProductPage span img {
+.ProductPage a {
+  display: flex;
+  align-items: center;
   margin-right: 25px;
 }
 

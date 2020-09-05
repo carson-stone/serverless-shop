@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useHistory, useParams, Link } from 'react-router-dom';
 import { API } from 'aws-amplify';
 import './ProductPage.css';
 import { useAppContext } from '../libs/contextLib';
@@ -13,6 +13,7 @@ export default function ProductPage() {
   const [product, setProduct] = useState(null);
   const [stars, setStars] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const history = useHistory();
 
   async function getReviews(product) {
     const data = await API.get('reviews', `/products/${product}/reviews`);
@@ -67,7 +68,10 @@ export default function ProductPage() {
           </span>
         </div>
         <Chip text='add to cart' primary />
-        <Chip text='leave review' />
+        <Chip
+          text='leave review'
+          onClick={() => history.push(`/products/${name}/review`)}
+        />
       </span>
       <span className='image-and-reviews'>
         <img
